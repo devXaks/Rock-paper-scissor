@@ -1,0 +1,1 @@
+alert("This website is made of education purposes intended to learn development. Background image credits  https://www.pixelstalk.net/ Pattern color light blue dark wallpaper.")
