@@ -14,6 +14,14 @@ const drawGame = () => {
     console.log("Draw")
 }
 
+const showWinner = (userWin) => {
+    if (userWin) {
+        console.log("you win!")
+    } else{
+        console.log("you lose")
+    }
+}
+
 const playGame = (userChoice) => {
     console.log("User choice = ", userChoice)
     const compChoice = genCompChoice();
@@ -29,9 +37,12 @@ const playGame = (userChoice) => {
             //scissor or paper
             userWin = compChoice === "scissor" ? true : false;
         } else if (userChoice === "paper"){
-            userWin = compChoice === "scissors" ? false :true;
+            userWin = compChoice === "scissor" ? false :true;
 
+        } else if (userChoice === "scissor"){
+            userWin = compChoice === "rock" ? false :true;
         }
+        showWinner(userWin)
     }
 }
 choices.forEach((choice) => {
